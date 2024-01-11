@@ -1,0 +1,23 @@
+{
+  "name": "final",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "babel-plugin-glsl": "^1.0.0",
+    "glsl-noise": "^0.0.0",
+    "glslify": "^7.1.1",
+    "gsap": "^3.12.4",
+    "stats-js": "^1.0.1",
+    "three": "^0.160.0"
+  }
+}
