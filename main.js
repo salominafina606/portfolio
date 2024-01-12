@@ -195,7 +195,7 @@ for (let i = 0; i < 8; i++) {
 
         const group = new THREE.Group();
         let light;
-        if (randomBoolean && i >= 3 && j <= 8 && j>=6 && max <= 5) {
+        if (randomBoolean && i >= 3 && j <= 8 && j>=6 && max <= 2) {
             // Create the point light
             light = new THREE.PointLight(0xff0000);
             light.intensity = 4.0;
