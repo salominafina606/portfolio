@@ -309,7 +309,7 @@ for (let i = 0; i < 8; i++) {
                 ease: "power1.inOut",
             });
             
-            if (lights.length > 5) {
+            if (lights.length > 3) {
                 lights[0].parent.remove(lights[0]);
                 // remove first element of lights array
                 lights.shift();
