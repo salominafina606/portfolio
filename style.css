@@ -2,16 +2,14 @@
   font-family: 'Avenir';
   src: url('/Metropolis-SemiBold.otf');
 }
+
 *, *::before, *::after{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   cursor: none;
-  overflow-x: hidden;
 }
-html{
-  scroll-snap-type: y mandatory;
-}
+
 body{
   background: #000!important;
   color: #fff;
@@ -377,17 +375,24 @@ canvas.webgl{
   overflow: hidden;
   z-index: -1;
 }
-.section{
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  scroll-snap-align: start;
-}
 /* select all elememt in container class */
 .container *{
   z-index: 1000;
 }
 
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+.about{
+  scroll-snap-align: start;
+}
 /* .container::before{
   content: '';
   position: absolute;

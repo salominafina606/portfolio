@@ -1,13 +1,12 @@
 import './style.css';
 import { gsap, ScrollTrigger } from "gsap/all";
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import Stats from 'stats-js';
-import { randInt } from 'three/src/math/MathUtils';
 
 var statsa = new Stats();
 let mouseX;
-// statsa.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+statsa.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+document.body.appendChild( statsa.dom );
 
 
 const initCursor = () => {
@@ -279,10 +278,10 @@ for (let i = 0; i < 8; i++) {
         const intersects = raycaster.intersectObjects( mesh.children, true );
         for ( let i = 0; i < intersects.length; i ++ ) {
             let light = new THREE.PointLight(0xff0000);
-            light.intensity = 4.0;
+            light.intensity = 8.0;
             light.distance = 4;
             light.decay = 1.0;
-            light.castShadow = false; // Disable shadows
+            light.castShadow = true; // Disable shadows
             light.position.set(0,0,0);
             // add light helper
             intersects[i].object.parent.add(light);
@@ -345,7 +344,7 @@ for (let i = 0; i < 8; i++) {
     scene.add(ambientLight);
 
     const sun = new THREE.SpotLight(0xffffff); // 0.1
-    sun.intensity = 40;
+    sun.intensity = 300;
 	sun.distance = 110;
 	sun.angle = Math.PI / 2;
 	sun.penumbra = 2.0;
